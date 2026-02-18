@@ -29,4 +29,30 @@ class QuestionController extends Controller
 
         return redirect()->route('questions.index')->with('success', 'Question created successfully.');
     }
+
+  
+    public function destroy(Question $question)
+    {
+        $question->delete();
+
+        return redirect()->route('questions.index')->with('success', 'Question deleted successfully.');
+    }
+
+ 
+    public function edit(Question $question)
+    {
+        return view('questions.edit', compact('question'));
+    }
+
+    public function update(Request $request, Question $question)
+    {
+        $validated = $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+        ]);
+
+        $question->update($validated);
+
+        return redirect()->route('questions.index')->with('success', 'Question updated successfully.');
+    }
 }

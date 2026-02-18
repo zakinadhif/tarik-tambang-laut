@@ -27,8 +27,13 @@
                 <td>{{ $question->question }}</td>
                 <td>{{ $question->answer }}</td>
                 <td>
-                    <!-- Add edit/delete buttons here later -->
-                    <span class="text-muted">Edit | Delete</span>
+                    <a href="{{ route('questions.edit', $question) }}" class="btn btn-sm btn-secondary">Edit</a>
+
+                    <form action="{{ route('questions.destroy', $question) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Are you sure you want to delete this question?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
                 </td>
             </tr>
             @endforeach

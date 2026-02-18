@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Tarik Tambang - Tebak Kata</title>
+    <title>Seachan - Tug of War</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -32,7 +32,7 @@
     
    <div class="container mx-auto px-4 py-4 md:py-6 relative">
         <h1 class="text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-            🎮 Game Tarik Tambang - Tebak Kata
+            🎮 Seachan - Game Quiz
         </h1>
         
         <div class="flex justify-center md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2 gap-3 mt-4 md:mt-0 z-50">
