@@ -55,7 +55,7 @@
             <div id="arena-geser" class="absolute inset-0 transition-transform duration-500 ease-in-out z-10 flex justify-center items-center py-2 md:py-4">
                 
                 <div class="relative h-full flex justify-center">
-                    <img id="img-utama" src="/game/image/tarikfix.png" class="h-full w-auto object-contain mix-blend-multiply transition-all duration-300 scale-[1.3]" alt="Tarik Tambang">
+                    <img id="img-utama" src="/game-assets/image/tarikfix.png" class="h-full w-auto object-contain mix-blend-multiply transition-all duration-300 scale-[1.3]" alt="Tarik Tambang">
                 </div>
 
             </div>
@@ -211,6 +211,9 @@
         </div>
     </div>
 
-    <script src="/game/game.js"></script>
+    <script>
+        const questionsFromServer = @json($questions);
+    </script>
+    <script src="/game-assets/game.js"></script>
 </body>
 </html>

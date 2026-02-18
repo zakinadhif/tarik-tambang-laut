@@ -17,15 +17,15 @@
         <thead>
             <tr>
                 <th>Question</th>
-                <th>Correct Option</th>
+                <th>Answer</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             @foreach($questions as $question)
             <tr>
-                <td>{{ $question->question_text }}</td>
-                <td>{{ $question->correct_option }}</td>
+                <td>{{ $question->question }}</td>
+                <td>{{ $question->answer }}</td>
                 <td>
                     <!-- Add edit/delete buttons here later -->
                     <span class="text-muted">Edit | Delete</span>
