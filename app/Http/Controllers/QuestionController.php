@@ -21,12 +21,8 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'question_text' => 'required',
-            'option_a' => 'required',
-            'option_b' => 'required',
-            'option_c' => 'required',
-            'option_d' => 'required',
-            'correct_option' => 'required|in:option_a,option_b,option_c,option_d',  
+            'question' => 'required',
+            'answer' => 'required',
         ]);
 
         Question::create($validated);

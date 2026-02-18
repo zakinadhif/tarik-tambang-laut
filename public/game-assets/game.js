@@ -19,7 +19,9 @@ const gameState = {
     pullAmount: 25, // Jumlah tarikan per jawaban benar
 };
 
-const questionsBank = [
+const questionsBank = (typeof questionsFromServer !== 'undefined' && questionsFromServer.length > 0)
+    ? questionsFromServer
+    : [
     { question: "Ibu kota Indonesia?", answer: "JAKARTA" },
     { question: "2 + 2 = ?", answer: "4" },
     { question: "Warna langit?", answer: "BIRU" },
@@ -92,13 +94,13 @@ function updateCharacterState(state) {
 
     switch (state) {
         case "idle":
-            imgUtama.src = "/game/image/tarikfix.png";
+            imgUtama.src = "/game-assets/image/tarikfix.png";
             imgUtama.classList.remove("scale-x-[-1.3]");
             flag.style.display = "block";
             break;
 
         case "kiri_menarik":
-            imgUtama.src = "/game/image/stat2.png";
+            imgUtama.src = "/game-assets/image/stat2.png";
             imgUtama.classList.remove("scale-x-[-1.3]");
             imgUtama.classList.add("tarik-kiri");
 
@@ -108,7 +110,7 @@ function updateCharacterState(state) {
             break;
 
         case "kanan_menarik":
-            imgUtama.src = "/game/image/stat2.png";
+            imgUtama.src = "/game-assets/image/stat2.png";
             imgUtama.classList.remove("scale-x-[-1.3]");
             imgUtama.classList.add("tarik-kanan");
 
@@ -119,13 +121,13 @@ function updateCharacterState(state) {
 
         case "kiri_menang":
             flag.style.display = "none";
-            imgUtama.src = "/game/image/winfix.png";
+            imgUtama.src = "/game-assets/image/winfix.png";
             imgUtama.classList.remove("scale-x-[-1.3]");
             break;
 
         case "kanan_menang":
             flag.style.display = "none";
-            imgUtama.src = "/game/image/winfix.png";
+            imgUtama.src = "/game-assets/image/winfix.png";
             imgUtama.classList.remove("scale-x-[-1.3]");
             break;
     }
