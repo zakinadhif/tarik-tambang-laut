@@ -140,7 +140,7 @@ function updateCharacterState(state) {
 
         case "kanan_menang":
             flag.style.display = "none";
-            imgUtama.src = "/game-assets/image/winfix.png";
+            imgUtama.src = "/game-assets/image/winfix2.png";
             imgUtama.classList.remove("scale-x-[-1.3]");
             break;
     }
